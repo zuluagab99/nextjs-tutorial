@@ -23,7 +23,7 @@ export default async function Page({ params } : { params: {id: string}}){
                     { label: 'Edit Invoice', href: `/dashboard/invoices/${id}/edit`, active: true}
                 ]}
             />
-            <Form invoice={invoice} customers={customers} />
+            <Form customers={customers} />
         </main>
     )
 }
