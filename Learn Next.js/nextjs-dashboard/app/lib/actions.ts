@@ -121,11 +121,11 @@ export async function deleteInvoice(id:string){
 }
 
 export async function authenticate(
-    prevState: string |  undefined,
+    prevState: string | undefined,
     formData: FormData
 ) {
     try {
-        await signIn('credentials', Object.entries(formData));
+        await signIn('credentials', Object.fromEntries(formData));
     } catch (error) {
         if ((error as Error).message.includes('CredentialsSignIn')){
             return 'CredentialsSignIn'
